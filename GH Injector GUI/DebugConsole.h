@@ -1,14 +1,19 @@
 /*
  * Author:       Broihon
- * Copyright:    Guided Hacking™ © 2012-2023 Guided Hacking LLC
+ * Copyright:    Guided Hackingâ„¢ Â© 2012-2023 Guided Hacking LLC
 */
 
 #pragma once
 
 #include "pch.h"
-
+#include <QWidget>
+#include <QString>
+#include <QPlainTextEdit>
+#include <QListWidget>
+#include <QGridLayout>
 #include "framelesswindow.h"
 
+class WindowDocker;
 class DebugConsole : public QWidget
 {
 	Q_OBJECT
