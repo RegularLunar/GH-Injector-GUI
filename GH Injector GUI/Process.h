@@ -1,6 +1,6 @@
 /*
  * Author:       Broihon
- * Copyright:    Guided Hacking™ © 2012-2023 Guided Hacking LLC
+ * Copyright:    Guided Hackingâ„¢ Â© 2012-2023 Guided Hacking LLC
 */
 
 #pragma once
@@ -14,7 +14,7 @@
 #include "pch.h"
 
 #include "DebugConsole.h"
-
+#include <TlHelp32.h> 
 enum class SORT_SENSE : int
 {
 	SS_PID_LO,
