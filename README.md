@@ -1,68 +1,72 @@
-# Qt GH DLL Injector GUI Interface
-- This is the GUI Interface for the [Guided Hacking DLL Injector](https://guidedhacking.com/resources/guided-hacking-dll-injector.4/)
-- This Version works with MSVC2019/MSVC2022 and QT 5.15.2
+# GH Injector GUI
 
-## Initial Qt GUI Interace by Kage/Multikill
+This repository contains the Qt-based GUI interface for the [Guided Hacking DLL Injector](https://guidedhacking.com/resources/guided-hacking-dll-injector.4/).
 
-The original GH Injector used AutoIt as a GUI frontend.  [Kage](https://guidedhacking.com/members/kage.109622/) / [Multikill](https://github.com/multikill) developed the initial version of Qt front end in 2020, which Broihon has continued to improve over the past 5 years.
+Originally prototyped in AutoIt, the front end was ported to C++ (Qt Framework) in 2020 by [Kage](https://guidedhacking.com/members/kage.109622/) and [Multikill](https://github.com/multikill) to improve performance and compatibility. It is currently maintained by Broihon.
 
-## Picture
-![image](https://github.com/guided-hacking/GH-Injector-GUI/assets/15186628/81f934c8-b319-4058-928c-69d8c971672a)
+**Compatibility:** MSVC 2019 / MSVC 2022 and Qt 5.15.2.
 
-<h3>Official Guided Hacking Courses</h3>
-<ul>
-	<li><a href="https://guidedhacking.com/ghb" target="_blank">The Game Hacking Bible</a>&nbsp;- a massive 70 chapter Game Hacking Course</li>
-	<li><a href="https://guidedhacking.com/threads/squally-cs420-game-hacking-course.14191/" target="_blank">Computer Science 420</a>&nbsp;- an eight chapter lecture on CS, Data Types &amp; Assembly</li>
-	<li><a href="https://guidedhacking.com/forums/binary-exploit-development-course.551/" target="_blank">Binary Exploit Development</a>&nbsp;- a 9 chapter series on exploit dev&nbsp;from a certified OSED</li>
-	<li><a href="https://guidedhacking.com/forums/game-hacking-shenanigans/" target="_blank">Game Hacking Shenanigans</a>&nbsp;- a twenty lesson Cheat Engine hacking course</li>
-	<li><a href="https://guidedhacking.com/threads/python-game-hacking-tutorial-1-1-introduction.18695/" target="_blank">Python Game Hacking Course</a>&nbsp;- 7 chapter external &amp; internal python hack lesson</li>
-	<li><a href="https://guidedhacking.com/threads/python-game-hacking-tutorial-2-1-introduction.19199/" target="_blank">Python App Reverse Engineering</a>&nbsp;- Learn to reverse python apps in 5 lessons</li>
-	<li><a href="https://guidedhacking.com/threads/web-browser-game-hacking-intro-part-1.17726/" target="_blank">Web Browser Game Hacking</a>&nbsp;- Hack javascript games with this 4 chapter course</li>
-	<li><a href="https://guidedhacking.com/forums/roblox-exploit-scripting-course-res100.521/" target="_blank">Roblox Exploiting Course</a>&nbsp;- 7 Premium Lessons on Hacking Roblox</li>
-	<li><a href="https://guidedhacking.com/forums/java-reverse-engineering-course-jre100.538/" target="_blank">Java Reverse Engineering Course</a>&nbsp;- 5 chapter beginner guide</li>
-	<li><a href="https://guidedhacking.com/forums/java-game-hacking-course-jgh100.553/" target="_blank">Java Game Hacking Course</a>&nbsp;- 6 Chapter Beginner Guide</li>
-</ul>
+## Preview
+![image](https://github.com/guided-hacking/GH-Injector-Library/assets/15186628/d5c6670c-538f-4a48-a565-bb277e4dc46e)
+![image](https://github.com/guided-hacking/GH-Injector-Library/assets/15186628/3ca83e0f-0e8b-4bc9-a101-0bb28e105698)![image](https://github.com/guided-hacking/GH-Injector-Library/assets/15186628/d070f0f0-8469-48f1-9744-6b199f0d1b73)
 
-## How to build
-1. Visual Studio 2019
-	1. Download https://visualstudio.microsoft.com/vs/
-2. Qt
-	1. Download https://www.qt.io/download-qt-installer
-	1. Install Qt 5.15.2 -> MSVC 2019 32-bit
-	2. Install Qt 5.15.2 -> MSVC 2019 64-bit
-3. Qt VS Tools for Visual Studio 2019
-	1. Download https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022
-4. Static Qt 5.15.2
-	1. Download https://github.com/martinrotter/qt5-minimalistic-builds/releases
-	2. Extract to "C:\Qt\5.15.2\qt-5.15.2-static-msvc2019-x86_64"
-5. Setup MSVC
-	1. Toolbar -> Qt VS Tools -> Qt Options -> Add ->
-		1. "C:\Qt\5.15.2\msvc2019"
-		2. "C:\Qt\5.15.2\msvc2019_64"
-		3. "C:\Qt\5.15.2\qt-5.15.2-static-msvc2019-x86_64"
-	2. Toolbar -> Project -> Properties -> Qt Project Settings -> Qt Installation -> 
-		1. x86 -> msvc2019
-		2. x64 -> msvc2019_64
-		3. x64_static -> qt-5.15.2-static-msvc2019-x86_64
-	3. Restart MSVC to repair intellisense
-	4. Build project
-6. GH Injector-Library
-	1. Download https://github.com/Broihon/GH-Injector-Library
-	2. Change C++ Language to std:c++20
-	3. Build and Copy to Project Folder
+## Features
+*   **UIPI Bypass:** Implements intelligent drag-and-drop to interact with processes at higher integrity levels.
+*   **Command Line Interface:** Supports argument-based execution for automation.
+*   **Auto Injection:** Watchdog functionality for automatic injection into target processes.
+*   **Shortcut Generator:** Built-in tool to create launch parameters.
 
-## Features:
-- Intelligent drag and drop that bypasses UIPI
-- Commandline interface
-- Shortcut generator
-- Auto injection
+## Build Instructions
 
-## Credits:
-- https://guidedhacking.com/resources/guided-hacking-dll-injector.4/
-- https://github.com/Jorgen-VikingGod/Qt-Frameless-Window-DarkStyle
-- https://github.com/fpoussin/Qt5-MSVC-Static
+This project requires a specific environment configuration involving both dynamic and static Qt builds. Follow these steps sequentially to ensure the project links correctly.
 
-## License
-All original licenses of all used components Qt are respected with the additional exception that compiling, linking or using is allowed. Go to Qt website and check for License.
+### 1. Prerequisites
+*   **Visual Studio 2019 or 2022**: [Download](https://visualstudio.microsoft.com/vs/)
+*   **Qt VS Tools Extension**: [Marketplace Link](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022)
 
+### 2. Qt Framework Setup
+Two versions of Qt 5.15.2 are required: standard (dynamic) and static.
 
+**A. Standard Installation**
+1.  Download the [Qt Online Installer](https://www.qt.io/download-qt-installer).
+2.  Install the following components:
+    *   `Qt 5.15.2` -> `MSVC 2019 32-bit`
+    *   `Qt 5.15.2` -> `MSVC 2019 64-bit`
+
+**B. Static Build Installation**
+1.  Download the **Qt 5.15.2 Static** release from [martinrotter/qt5-minimalistic-builds](https://github.com/martinrotter/qt5-minimalistic-builds/releases).
+2.  Extract the archive to a clean path (Project defaults expect the path below):
+    ```text
+    C:\Qt\5.15.2\qt-5.15.2-static-msvc2019-x86_64
+    ```
+
+### 3. Visual Studio Configuration
+
+**Register Qt Versions:**
+1.  In Visual Studio, go to **Extensions** -> **Qt VS Tools** -> **Qt Versions**.
+2.  Add the following paths (adjust if your installation path differs):
+    *   `C:\Qt\5.15.2\msvc2019`
+    *   `C:\Qt\5.15.2\msvc2019_64`
+    *   `C:\Qt\5.15.2\qt-5.15.2-static-msvc2019-x86_64`
+
+**Project Properties:**
+1.  Right-click the Project in Solution Explorer -> **Properties**.
+2.  Navigate to **Qt Project Settings** -> **Qt Installation**.
+3.  Map the configurations as follows:
+    *   `x86` configuration: Select `msvc2019`
+    *   `x64` configuration: Select `msvc2019_64`
+    *   `x64_static` configuration: Select `qt-5.15.2-static-msvc2019-x86_64`
+4.  Restart Visual Studio to force Intellisense re-indexing.
+
+### 4. Dependencies
+1.  Download the [GH-Injector-Library](https://github.com/Broihon/GH-Injector-Library).
+2.  Set the C++ Language Standard to `std:c++20`.
+3.  Build the library.
+4.  Copy the compiled library files to the GH Injector GUI project folder.
+
+## Credits
+
+*   **Logic/Maintenance:** [Broihon](https://github.com/Broihon)
+*   **Initial Qt Port:** [Kage](https://guidedhacking.com/members/kage.109622/) and [Multikill](https://github.com/multikill)
+*   **Third-party:**
+    *   [Qt-Frameless-Window-DarkStyle](https://github.com/Jorgen-VikingGod/Qt-Frameless-Window-DarkStyle)
